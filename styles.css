@@ -62,10 +62,49 @@ button:hover {
     margin-top: 8px;
 }
 
-.aulas {
+.main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
+    margin-top: 32px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .info {
+    padding: 16px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.card .description {
+    padding: 16px;
+    font-size: 14px;
+    color: #666;
 }
 
 footer {
@@ -77,6 +116,7 @@ footer {
     border-radius: 8px;
 }
 
+/* Estilos para o tema claro */
 .light-theme {
     background-color: #ffffff;
     color: #333333;
@@ -90,6 +130,7 @@ footer {
     background-color: #ffffff;
 }
 
+/* Estilos para o tema escuro */
 .dark-theme {
     background-color: #121212;
     color: #e0e0e0;
@@ -103,19 +144,24 @@ footer {
     background-color: #333333;
 }
 
+/* Responsividade */
 @media (max-width: 896px) {
     body {
         padding: 16px 8px;
     }
+
     header {
         flex-direction: column;
         align-items: flex-start;
     }
-    .aulas {
+
+    .main {
         grid-template-columns: 1fr;
     }
+
     button {
         padding: 10px 16px;
         font-size: 14px;
     }
 }
+

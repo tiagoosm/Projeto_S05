@@ -182,3 +182,9 @@
   .icon-color {
     filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
   }
+
+  .carousel button
+  {
+    position: absolute;
+    margin-bottom: 100px;
+  }

@@ -38,6 +38,41 @@
       flex-direction: column;
       gap: var(--space-16);
       margin: 0 auto;
+      transition: background-color 0.5s linear;
+    }
+
+    .container.dark
+    {
+      background: #1e1e1e;
+    }
+
+    .container.dark .navbar
+    {
+      background-color: #1e1e1e;
+    }
+
+    .container.dark .card
+    {
+      background-color: #333;
+    }
+
+    .container.dark .card h1,
+    .container.dark .card p
+    {
+      color: white;
+    }
+
+    .container.dark .card-carousel,
+    .container.dark .carousel
+    {
+      background-color: #333;
+    }
+
+    .container.dark .card-carousel h2,
+    .container.dark .card-carousel p2,
+    .container.dark .card-carousel span
+    {
+      color: white;
     }
 
     .row
@@ -60,6 +95,12 @@
         grid-template-columns: 1fr auto 1fr;
         align-items: center;
         position: relative;
+        transition: background-color 0.5s linear;
+      }
+
+      .logo-esquerda:hover
+      {
+        cursor: pointer;
       }
 
       .logo-esquerda,
@@ -100,7 +141,7 @@
     width: 100%;
     font-family: sans-serif;
     margin: 0px auto;
-
+    transition: background-color 0.5s linear;
 }
 
 .card h1 {
@@ -144,6 +185,7 @@
   overflow: hidden;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
+  transition: background-color 0.5s linear;
 }
 
 .carousel-item img {
@@ -157,6 +199,7 @@
   padding: 20px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+  transition: background-color 0.5s linear;
 }
 
 .card-carousel h2 {
@@ -189,4 +232,10 @@
 {
   position: absolute;
   margin-bottom: 100px;
+}
+
+.nav-link:hover
+{
+  text-shadow: 0px 0px 15px rgb(57, 116, 217);
+  cursor: pointer;
 }

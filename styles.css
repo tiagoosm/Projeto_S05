@@ -1,167 +1,184 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root
+    {
+      --space-8: 8px;
+      --space-16: 16px;
+      --space-24: 24px;
+      --space-32: 32px;
+      --space-40: 40px;
+      --gutter: 16px;
+    }
+
+    * 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body
+    {
+      background: #000000;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container
+    {
+      width: 100%;
+      max-width: 414px;
+      height: 100vh;
+      background: rgb(237, 237, 237);
+      padding: var(--space-16);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-16);
+    }
+
+    .row
+    {
+      display: flex;
+      gap: var(--gutter);
+    }
+
+    .col
+    {
+      flex: 1;
+      background: #eee; 
+    }
+
+    .navbar {
+        background-color:  rgb(237, 237, 237);
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        position: relative;
+      }
+
+      .logo-esquerda,
+      .logo-direita {
+        width: 25px;
+        height: auto;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
+      }
+
+      .esquerda {
+        justify-self: start;
+      }
+  
+      .centro {
+        justify-self: center;
+      }
+  
+      .direita {
+        justify-self: end;
+      }
+  
+      .svg_logo_inatel {
+        width: 80px;
+        height: auto;
+        display: flex;
+      }
+  
+      .svg_logo_inatel path {
+        fill: rgb(57, 116, 217);
+      }
+
+.card
+{
+    background-color: white;
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    font-family: sans-serif;
+    margin: 0px auto;
+
 }
 
-body {
-    font-family: 'Arimo', sans-serif;
-    font-size: 16px;
-    background-color: #f4f4f4;
+.card h1 {
+    margin-top: 0px;
+    margin-bottom: 8px;
     color: #333;
-    padding: 16px;
+    font-size:20px;
+    font-weight: bold;
+  }
+  
+  .card p {
+    margin: 4px 0;
+    color: #333;
+    font-size: 12px;
+  }
+
+  #icon-notification
+  {
+    width: 17px;
+    height: auto;
+    margin-right: 8px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
 }
 
-header {
-    padding: 16px;
-    background-color: #0066B3;
-    color: white;
+  #icon-message
+  {
+    width: 15px;
+    height: auto;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
+}
+
+#carousel {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 24px;
-}
-
-button {
-    padding: 12px 20px;
-    background-color: #0066B3;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #00509e;
-}
-
-.icon {
-    font-family: 'Material Icons Outlined';
-    font-size: 24px;
-    color: inherit;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.mensagens, .noticias, .aulas {
-    margin-top: 16px;
-    padding: 16px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.mensagens p, .noticias p {
-    font-size: 16px;
-    margin-top: 8px;
-}
-
-.main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 16px;
-    margin-top: 32px;
-}
-
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  .carousel {
+    width: 350px;
+    border-radius: 20px;
     overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card .info {
-    padding: 16px;
-}
-
-.card h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.card .description {
-    padding: 16px;
-    font-size: 14px;
-    color: #666;
-}
-
-footer {
-    margin-top: 32px;
-    background-color: #0066B3;
-    color: white;
-    padding: 16px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .carousel-item img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+  
+  .card-carousel {
+    background-color: white;
     text-align: center;
-    border-radius: 8px;
-}
+    padding: 20px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+  
+  .card-carousel h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .card-carousel p2 {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .card-carousel span {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: black;
+  }
 
-/* Estilos para o tema claro */
-.light-theme {
-    background-color: #ffffff;
-    color: #333333;
-}
-
-.light-theme header, .light-theme footer {
-    background-color: #0066B3;
-}
-
-.light-theme .mensagens, .light-theme .noticias, .light-theme .aulas {
-    background-color: #ffffff;
-}
-
-/* Estilos para o tema escuro */
-.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-.dark-theme header, .dark-theme footer {
-    background-color: #1f1f1f;
-}
-
-.dark-theme .mensagens, .dark-theme .noticias, .dark-theme .aulas {
-    background-color: #333333;
-}
-
-/* Responsividade */
-@media (max-width: 896px) {
-    body {
-        padding: 16px 8px;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .main {
-        grid-template-columns: 1fr;
-    }
-
-    button {
-        padding: 10px 16px;
-        font-size: 14px;
-    }
-}
-
+  .icon-color {
+    filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
+  }

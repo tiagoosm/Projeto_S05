@@ -28,7 +28,7 @@
     .container
     {
       width: 100%;
-      max-width: 414px;
+      max-width: 3000px;
       height: 100vh;
       background: rgb(237, 237, 237);
       padding: var(--space-16);
@@ -37,11 +37,13 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-16);
+      margin: 0 auto;
     }
 
     .row
     {
       display: flex;
+      flex-wrap: wrap;
       gap: var(--gutter);
     }
 
@@ -93,9 +95,9 @@
 {
     background-color: white;
     border-radius: 20px;
-    padding: 16px;
+    padding: var(--space-16);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 100%;
     font-family: sans-serif;
     margin: 0px auto;
 
@@ -103,14 +105,14 @@
 
 .card h1 {
     margin-top: 0px;
-    margin-bottom: 8px;
+    margin-bottom: var(--space-8);
     color: #333;
     font-size:20px;
     font-weight: bold;
   }
   
   .card p {
-    margin: 4px 0;
+    margin: var(--space-8) 0;
     color: #333;
     font-size: 12px;
   }
@@ -119,7 +121,7 @@
   {
     width: 17px;
     height: auto;
-    margin-right: 8px;
+    margin-right: var(--space-8);
     filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
 }
 
@@ -127,64 +129,64 @@
   {
     width: 15px;
     height: auto;
-    margin-right: 10px;
+    margin-right: var(--space-16);
     filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
 }
 
 #carousel {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .carousel {
-    width: 350px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    background-color: white;
-  }
-  
-  .carousel-item img {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-  }
-  
-  .card-carousel {
-    background-color: white;
-    text-align: center;
-    padding: 20px;
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
-  }
-  
-  .card-carousel h2 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: black;
-  }
-  
-  .card-carousel p2 {
-    display: block;
-    margin-bottom: 16px;
-    font-size: 12px;
-    color: black;
-  }
-  
-  .card-carousel span {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: black;
-  }
+  display: flex;
+  justify-content: center;
+}
 
-  .icon-color {
-    filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
-  }
+.carousel {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
 
-  .carousel button
-  {
-    position: absolute;
-    margin-bottom: 100px;
-  }
+.carousel-item img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.card-carousel {
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.card-carousel h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: var(--space-8);
+  color: black;
+}
+
+.card-carousel p2 {
+  display: block;
+  margin-bottom: var(--space-16);
+  font-size: 12px;
+  color: black;
+}
+
+.card-carousel span {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: black;
+}
+
+.icon-color {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(75%) saturate(558%) hue-rotate(190deg) brightness(97%) contrast(92%);
+}
+
+.carousel button
+{
+  position: absolute;
+  margin-bottom: 100px;
+}

@@ -75,6 +75,17 @@
       color: white;
     }
 
+    .container.dark .comp-aula
+    {
+      background-color: #333;
+    }
+
+    .container.dark .titulo_aula,
+    .container.dark .local-horario
+    {
+      color: white;
+    }
+
     .row
     {
       display: flex;
@@ -249,6 +260,7 @@
   font-family: sans-serif;
   margin: 0px auto;
   margin-bottom: 16px;
+  transition: background-color 0.5s linear;
 }
 
 .titulo_aula {
@@ -258,6 +270,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #000000;
 }
 
 .lables {
@@ -296,4 +309,5 @@
   margin-left: var(--space-8);
   font-size: 14px;
   margin-top: 8px;
+  color: black;
 }

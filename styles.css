@@ -239,3 +239,61 @@
   text-shadow: 0px 0px 15px rgb(57, 116, 217);
   cursor: pointer;
 }
+
+.comp-aula {
+  background-color: white;
+  border-radius: 20px;
+  padding: var(--space-16);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-family: sans-serif;
+  margin: 0px auto;
+  margin-bottom: 16px;
+}
+
+.titulo_aula {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0 var(--space-8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lables {
+  display: flex;
+}
+
+.lable-prova,
+.lable-frequencia,
+.lable-nota {
+  background-color: #126ae2;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.lable-frequencia {
+  background-color: #126ae2;
+}
+
+.lable-nota {
+  background-color: #126ae2;
+}
+
+.p_lable {
+  font-size: 13px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.local-horario
+{
+  margin-left: var(--space-8);
+  font-size: 14px;
+  margin-top: 8px;
+}

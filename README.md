@@ -65,14 +65,14 @@ Once opened in a browser:
 ## 📁 Project Structure
 
 Projeto_S05/  
-├── index.html             # Main HTML structure  
-├── styles.css             # Custom CSS overrides  
-├── script.js              # JavaScript for interactivity  
-├── assets/                # Icons and image resources  
+├── index.html                 # Main HTML structure  
+├── styles.css                 # Custom CSS overrides  
+├── script.js                  # JavaScript for interactivity  
+├── assets/                    # Icons and image resources  
 │   ├── calendar-icon.png  
 │   ├── localization-icon.png  
 │   ├── menu-icon.png  
 │   ├── message-icon.png  
 │   ├── notification-icon.png  
 │   └── perfil-icon.png  
-└── README.md              # Project documentation  
+└── README.md                  # Project documentation  

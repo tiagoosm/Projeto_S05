@@ -1,6 +1,5 @@
 # 📊 Inatel Dashboard – Projeto S05
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 **Inatel Dashboard** is a web-based interface developed as part of the S05 (Human-Computer Interaction) course at Inatel. The project aims to redesign the institution's dashboard, enhancing usability and introducing new functionalities to improve user interaction and experience.
 

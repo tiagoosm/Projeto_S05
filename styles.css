@@ -311,3 +311,70 @@
   margin-top: 8px;
   color: black;
 }
+
+#vagas {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filtro button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filtro button:hover {
+  background-color: #0056b3;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.vaga {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vaga h3 {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.vaga p {
+  font-size: 14px;
+  color: #555;
+}
+
+.vaga a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.vaga a:hover {
+  text-decoration: underline;
+}

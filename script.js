@@ -1,4 +1,5 @@
 let x = 0;
+let y = 0;
 
 function AlterarTema()
 {
@@ -11,6 +12,20 @@ function AlterarTema()
     {
         document.getElementById("menu-tema").style.display = "none"
         x--
+    }
+}
+
+function MostrarVagas()
+{
+    if(y%2 == 0)
+    {
+        document.getElementById("content-vagas").style.display = "flex"
+        y++;
+    }
+    else
+    {
+        document.getElementById("content-vagas").style.display = "none"
+        y--
     }
 }
 
@@ -122,3 +137,45 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const vagas = [
+  {
+    id: 1,
+    tipo: 'emprego',
+    titulo: 'Desenvolvedor Front-End',
+    descricao: 'Buscamos um desenvolvedor com experiência em React e CSS.',
+    link: ''
+  },
+  {
+    id: 2,
+    tipo: 'estagio',
+    titulo: 'Estágio em Desenvolvimento Web',
+    descricao: 'Oportunidade para estudantes com interesse em HTML, CSS e JavaScript.',
+    link: ''
+  },
+  {
+    id: 3,
+    tipo: 'emprego',
+    titulo: 'Engenheiro de Software Backend',
+    descricao: 'Experiência em Node.js e bancos de dados relacionais.',
+    link: ''
+  }
+];
+
+function filtrarVagas(tipo) {
+  const listaVagas = document.getElementById('lista-vagas');
+  listaVagas.innerHTML = '';
+  const vagasFiltradas = tipo === 'todos' ? vagas : vagas.filter(vaga => vaga.tipo === tipo);
+  vagasFiltradas.forEach(vaga => {
+    const div = document.createElement('div');
+    div.classList.add('vaga');
+    div.innerHTML = `
+      <h3>${vaga.titulo}</h3>
+      <p>${vaga.descricao}</p>
+      <a href="${vaga.link}" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+    `;
+    listaVagas.appendChild(div);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => filtrarVagas('todos'));
